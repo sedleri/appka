@@ -1,7 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
 </script>
 
 <header class="flex justify-between">
@@ -23,7 +21,7 @@
 	</nav>
 </header>
 
-<style>
+<style> 
 	nav {
 		display: flex;
 		justify-content: center;
