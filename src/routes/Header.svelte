@@ -2,81 +2,38 @@
 	import { page } from '$app/stores';
 </script>
 
-<header class="flex justify-between">
-	<nav class="flex justify-between bg-white">
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+<header>
+	<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+		<div class="flex items-center flex-shrink-0 text-white mr-6">
+			<svg
+				class="fill-current h-8 w-8 mr-2"
+				width="54"
+				height="54"
+				viewBox="0 0 54 54"
+				xmlns="http://www.w3.org/2000/svg"
+				><path
+					d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+				/></svg
+			>
+			<span class="font-semibold text-xl tracking-tight">
 				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/penys' ? 'page' : undefined}>
-				<a href="/penys">Penys</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
+			</span>
+		</div>
+		<div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+			<div class="text-sm lg:flex-grow">
+				<a
+					href="/penys"
+					class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+				>
+					Penys
+				</a>
+				<a
+					href="/prdel"
+					class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+				>
+					Prdel
+				</a>
+			</div>
+		</div>
 	</nav>
 </header>
-
-<style> 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
-	}
-</style>

@@ -1,0 +1,9 @@
+{
+    "launch": {
+
+        "configurations": [],
+        "compounds": [],
+        "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, ColumnLimit: 1000 }"
+    }
+    
+}
